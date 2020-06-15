@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Core.Tests
 {
-    public class UnitTest1
+    public class MessageDispatcher_AddHandlerForShould
     {
         [Fact]
         public void Test1()
