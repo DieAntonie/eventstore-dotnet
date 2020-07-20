@@ -1,0 +1,4 @@
+// {type:class}
+// {direction:topDown}
+[≪Aggregate≫;BaseAggregate|Guid Id|ApplyEvents(IEnumerable events);ApplyEvent(TEvent event)]
+[BaseAggregate]^[Order]

@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace Core.Tests
+namespace Interface.Tests
 {
-    public class MessageDispatcher_AddHandlerForShould
+    public class UnitTest1
     {
         [Fact]
         public void Test1()
