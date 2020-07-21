@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { WeatherListComponent } from './weather-list/weather-list.component';
 import { WeatherAlertComponent } from './weather-alert/weather-alert.component';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WeatherAlertComponent } from './weather-alert/weather-alert.component';
     HomeComponent,
     CounterComponent,
     WeatherListComponent,
-    WeatherAlertComponent
+    WeatherAlertComponent,
+    WeatherDetailsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,6 +33,7 @@ import { WeatherAlertComponent } from './weather-alert/weather-alert.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'weather-list', component: WeatherListComponent },
+      { path: 'weather-details/:summary', component: WeatherDetailsComponent },
     ])
   ],
   providers: [],
