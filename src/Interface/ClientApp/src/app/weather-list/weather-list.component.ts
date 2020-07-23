@@ -1,5 +1,5 @@
-import { Component, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { WeatherService } from '../weather-service/weather.service';
 
 @Component({
   selector: 'app-weather-list',
@@ -8,10 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class WeatherListComponent {
   public forecasts: WeatherForecast[];
 
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<WeatherForecast[]>(baseUrl + 'weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
+  constructor(private weatherService: WeatherService) {
+    this.weatherService.getWeather().subscribe(weather => this.forecasts = weather);
   }
 
   onNotify() {
