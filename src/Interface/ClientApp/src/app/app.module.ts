@@ -15,6 +15,7 @@ import { WeatherListComponent } from './weather-list/weather-list.component';
 import { WeatherAlertComponent } from './weather-alert/weather-alert.component';
 import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HeroesComponent } from './heroes/heroes.component';
     WeatherListComponent,
     WeatherAlertComponent,
     WeatherDetailsComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
