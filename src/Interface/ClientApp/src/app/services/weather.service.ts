@@ -8,11 +8,13 @@ import { Observable } from 'rxjs';
 export class WeatherService {
   public forecasts: Observable<WeatherForecast[]>;
 
+  private readonly weatherUrl = 'weatherforecast';
+
   constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) { }
 
   getWeather() {
     if (!this.forecasts)
-      this.forecasts = this.http.get<WeatherForecast[]>(this.baseUrl + 'weatherforecast');
+      this.forecasts = this.http.get<WeatherForecast[]>(this.baseUrl + this.weatherUrl);
     return this.forecasts;
   }
 
